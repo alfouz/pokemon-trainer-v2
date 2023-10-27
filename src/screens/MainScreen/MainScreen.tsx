@@ -1,15 +1,11 @@
-import useCatchPokemon from "../../hooks/useCatchPokemon";
-import useCurrentPokemon from "../../state/useCurrentPokemon";
+import WildPokemonSection from "../../sections/WildPokemonSection/WildPokemonSection";
+import { Container } from "./MainScreen.styles";
 
 function MainScreen() {
-  useCatchPokemon();
-  const { removePokemon } = useCurrentPokemon((s) => s);
-
   return (
-    <>
-      <button onClick={removePokemon}>Give Me more</button>
-      <div>TEST</div>
-    </>
+    <Container>
+      <WildPokemonSection></WildPokemonSection>
+    </Container>
   );
 }
 

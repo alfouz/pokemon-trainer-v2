@@ -1,8 +1,15 @@
+import { getPokemonName } from "../../language/location";
 import { ConcretePokemon } from "../../types/ownTypes";
+import { OwnStat } from "../../types/utilTypes";
+import MoveBadge from "../MoveBadge/MoveBadge";
+import StatBadge from "../StatBadge/StatBadge";
 import TypeBadge from "../TypeBadge/TypeBadge";
 import {
   Container,
+  MoveContainer,
+  NameSpan,
   SpriteImage,
+  StatsContainer,
   TypesContainer,
 } from "./WildPokemonCard.styles";
 
@@ -14,11 +21,23 @@ function WildPokemonCard({ pokemon }: Props) {
   return (
     <Container>
       {pokemon.sprite && <SpriteImage src={pokemon.sprite} />}
+      <NameSpan>{getPokemonName(pokemon.name)}</NameSpan>
       <TypesContainer>
         {pokemon.types.map((type) => (
           <TypeBadge type={type.type.name} key={type.type.name} />
         ))}
       </TypesContainer>
+      <StatsContainer>
+        {Object.keys(pokemon.stats).map((stat: string) => (
+          <StatBadge
+            stat={stat as OwnStat}
+            value={pokemon.stats[stat as OwnStat]}
+          />
+        ))}
+      </StatsContainer>
+      <MoveContainer>
+        <MoveBadge move={pokemon.move} />
+      </MoveContainer>
     </Container>
   );
 }

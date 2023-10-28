@@ -1,6 +1,6 @@
-import { PokemonStat, PokemonType } from "./ImportedTypes";
+import { PokemonType } from "./ImportedTypes";
 import PokemonTypes from "../consts/PokemonTypes";
-import { OwnMove } from "./utilTypes";
+import { OwnMove, OwnStats } from "./utilTypes";
 
 export interface ConcretePokemon {
   id: number;
@@ -9,7 +9,7 @@ export interface ConcretePokemon {
   height: number;
   move: OwnMove;
   sprite: string | null;
-  stats: PokemonStat[];
+  stats: OwnStats;
   types: PokemonType[];
 }
 

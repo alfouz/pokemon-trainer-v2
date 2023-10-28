@@ -1,6 +1,10 @@
 import { Pokemon } from "../types/ImportedTypes";
 import { ConcretePokemon } from "../types/ownTypes";
-import { getMove, selectRandomType } from "./randomFunctions";
+import {
+  getMove,
+  selectRandomStats,
+  selectRandomType,
+} from "./randomFunctions";
 
 const getWildPokemon: (pokemon: Pokemon) => ConcretePokemon = (pokemon) => {
   return {
@@ -15,7 +19,7 @@ const getWildPokemon: (pokemon: Pokemon) => ConcretePokemon = (pokemon) => {
     held_item: pokemon.held_items[0],
     move: getMove(selectRandomType(pokemon.types.map((t) => t.type.name))),
     sprite: pokemon.sprites.front_default,
-    stats: pokemon.stats,
+    stats: selectRandomStats(pokemon.stats),
     types: pokemon.types,
   };
 };

@@ -11,7 +11,6 @@ import WildPokemonCard from "../../components/WildPokemonCard/WildPokemonCard";
 function WildPokemonSection() {
   useCatchPokemon();
   const { removePokemon, currentPokemon } = useCurrentPokemon((s) => s);
-  console.log(currentPokemon);
   return (
     <Container>
       <SpriteContainer>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 256px;
-  height: 256px;
+  height: 344px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,6 +10,11 @@ export const Container = styled.div`
   border: 2px solid black;
   background: white;
   border-radius: 8px;
+`;
+
+export const NameSpan = styled.span`
+  color: black;
+  font-weight: bold;
 `;
 
 export const SpriteImage = styled.img`
@@ -23,4 +28,17 @@ export const SpriteImage = styled.img`
 export const TypesContainer = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+export const StatsContainer = styled.div`
+  display: flex;
+  margin-top: 12px;
+  flex-direction: row;
+  gap: 8px;
+`;
+
+export const MoveContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
 `;

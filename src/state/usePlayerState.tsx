@@ -11,6 +11,7 @@ interface PlayerState {
 const usePlayerState = create<PlayerState>()(
   persist(
     (set) => ({
+      currentTeam: [],
       pokemons: [],
       options: { maxPokemonId: 150, speed: 2000 },
       addPokemon: (newPokemon) =>

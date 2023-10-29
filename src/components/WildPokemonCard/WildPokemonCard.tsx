@@ -32,6 +32,7 @@ function WildPokemonCard({ pokemon }: Props) {
           <StatBadge
             stat={stat as OwnStat}
             value={pokemon.stats[stat as OwnStat]}
+            key={stat}
           />
         ))}
       </StatsContainer>

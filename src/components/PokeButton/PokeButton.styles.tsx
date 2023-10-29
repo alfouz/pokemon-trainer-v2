@@ -13,4 +13,11 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: transform 0.2s;
+  &: hover {
+    transform: scale(1.05);
+  }
+  &: active {
+    transform: scale(1.02);
+  }
 `;

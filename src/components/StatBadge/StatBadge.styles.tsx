@@ -10,6 +10,7 @@ export const OutterContainer = styled.div`
 export const SpanStyled = styled.span`
   font-weight: bold;
   color: black;
+  user-select: none;
 `;
 
 export const Container = styled.div<{ stat: OwnStat }>`

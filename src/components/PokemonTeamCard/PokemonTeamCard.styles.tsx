@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 48px;
-  height: 48px;
+  width: 96px;
+  height: 96px;
   cursor: pointer;
   background: white;
   border: 1px solid black;
@@ -16,6 +16,6 @@ export const Container = styled.div`
 `;
 
 export const StyledImage = styled.img`
-  width: 48px;
-  height: 48px;
+  width: 96px;
+  height: 96px;
 `;

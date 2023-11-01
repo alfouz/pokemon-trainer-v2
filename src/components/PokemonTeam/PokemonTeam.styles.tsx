@@ -17,9 +17,10 @@ export const StyledSpan = styled.span`
 `;
 
 export const InnerContainer = styled.div`
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: 8px;
   flex-wrap: wrap;
 `;

@@ -14,7 +14,7 @@ const GymBadge = ({ children, onClose }: Props) => {
   return (
     <Container>
       <InnerContainer>
-        <CloseButton onClick={onClose}>Close</CloseButton>
+        <CloseButton onClick={onClose}>X</CloseButton>
         <ContentContainer>{children}</ContentContainer>
       </InnerContainer>
     </Container>

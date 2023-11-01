@@ -10,6 +10,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `;
 
 export const InnerContainer = styled.div`
@@ -21,16 +22,21 @@ export const InnerContainer = styled.div`
 `;
 
 export const CloseButton = styled.div`
-  padding: 2px 4px;
+  width: 24px;
+  height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: black;
   align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  margin: 4px;
 `;
 
 export const ContentContainer = styled.div`
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 `;

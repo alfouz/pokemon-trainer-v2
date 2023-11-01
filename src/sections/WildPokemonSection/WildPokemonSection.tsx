@@ -7,6 +7,7 @@ import PokeButton from "../../components/PokeButton/PokeButton";
 import useCurrentPokemon from "../../state/useCurrentPokemon";
 import useCatchPokemon from "../../hooks/useCatchPokemon";
 import WildPokemonCard from "../../components/WildPokemonCard/WildPokemonCard";
+import PokeballSelector from "../../components/PokeballSelector/PokeballSelector";
 
 function WildPokemonSection() {
   useCatchPokemon();
@@ -20,6 +21,7 @@ function WildPokemonSection() {
           <span>LOADING</span>
         )}
       </SpriteContainer>
+      <PokeballSelector />
       <BottomContainer>
         <PokeButton onClick={removePokemon}>Give me other</PokeButton>
       </BottomContainer>

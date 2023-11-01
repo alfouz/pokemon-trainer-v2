@@ -19,3 +19,13 @@ export type OwnMedal = {
   name: string;
   image: string;
 };
+
+export type OwnBall = "pokeball" | "superball" | "ultraball" | "masterball";
+
+export type OwnPokeball = {
+  name: string;
+  type: OwnBall;
+  image: string;
+  chance: number;
+  index: number;
+};

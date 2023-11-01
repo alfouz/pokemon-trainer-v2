@@ -16,7 +16,8 @@ export const MedalContainer = styled.div`
   flex-direction: row;
   align-items: center;
   background: pink;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 8px;
 `;
 
 export const InnerContainer = styled.div`

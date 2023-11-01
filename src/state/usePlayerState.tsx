@@ -1,10 +1,11 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Pokemon } from "../types/ImportedTypes";
+import { ConcretePokemon } from "../types/ownTypes";
 
 interface PlayerState {
-  pokemons: Pokemon[];
-  addPokemon: (newPokemon: Pokemon) => void;
+  currentTeam: ConcretePokemon[];
+  pokemons: ConcretePokemon[];
+  addPokemon: (newPokemon: ConcretePokemon) => void;
   options: { speed: number; maxPokemonId: number };
   inventory: { balls: [number, number, number, number] };
 }

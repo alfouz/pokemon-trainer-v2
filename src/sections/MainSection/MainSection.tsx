@@ -1,11 +1,11 @@
 import Footer from "../../components/Footer/Footer";
-import BattleSection from "../BattleSection/BattleSection";
+import ContentSection from "../ContentSection/ContentSection";
 import { Container } from "./MainSection.styles";
 
 function MainSection() {
   return (
     <Container>
-      <BattleSection></BattleSection>
+      <ContentSection></ContentSection>
       <Footer />
     </Container>
   );

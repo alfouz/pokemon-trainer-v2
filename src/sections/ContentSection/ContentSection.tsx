@@ -1,6 +1,6 @@
 import GymBadge from "../../components/GymBadge/GymBadge";
 import PokemonBadges from "../../consts/PokemonBadges";
-import BattleSection from "../BattleSection/BattleContainer";
+import BattleSection from "../BattleSection/BattleSection";
 import BoxSection from "../BoxSection/BoxSection";
 import {
   Container,

@@ -19,7 +19,7 @@ const usePlayerState = create<PlayerState>()(
       currentTeam: [],
       pokemons: [],
       inventory: { balls: [1, 1, 1, 1] },
-      options: { maxPokemonId: 150, speed: 2000 },
+      options: { maxPokemonId: 150, speed: 200 },
       addPokemon: (newPokemon) =>
         set((state) =>
           state.currentTeam.length <= 40

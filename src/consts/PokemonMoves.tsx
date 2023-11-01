@@ -32,56 +32,56 @@ const PokemonMoves: {
       type: "normal",
     },
   },
-  fight: {
+  flying: {
     low: {
       name: "wing-attack",
       id: "17",
       power: 40,
-      type: "fight",
+      type: "flying",
     },
     mid: {
       name: "air-cutter",
       id: "314",
       power: 60,
-      type: "fight",
+      type: "flying",
     },
     strong: {
       name: "drill-peck",
       id: "65",
       power: 80,
-      type: "fight",
+      type: "flying",
     },
     extreme: {
       name: "brave-bird",
       id: "413",
       power: 100,
-      type: "fight",
+      type: "flying",
     },
   },
-  flying: {
+  fighting: {
     low: {
       name: "jet-punch",
       id: "857",
       power: 40,
-      type: "low",
+      type: "fighting",
     },
     mid: {
       name: "force-palm",
       id: "395",
       power: 60,
-      type: "low",
+      type: "fighting",
     },
     strong: {
       name: "aura-sphere",
       id: "396",
       power: 80,
-      type: "low",
+      type: "fighting",
     },
     extreme: {
       name: "close-combat",
       id: "370",
       power: 100,
-      type: "low",
+      type: "fighting",
     },
   },
   poison: {

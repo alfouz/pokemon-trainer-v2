@@ -3,7 +3,7 @@ import PokemonTypes from "../consts/PokemonTypes";
 import { OwnMove, OwnStats } from "./utilTypes";
 
 export interface ConcretePokemon {
-  id: number;
+  id: string;
   name: string;
   base_experience: number;
   height: number;

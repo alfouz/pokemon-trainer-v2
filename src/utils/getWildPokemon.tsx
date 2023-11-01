@@ -1,5 +1,6 @@
 import { Pokemon } from "../types/ImportedTypes";
 import { ConcretePokemon } from "../types/ownTypes";
+import { getPokemonId } from "./genericUtils";
 import {
   getMove,
   selectRandomStats,
@@ -8,7 +9,7 @@ import {
 
 const getWildPokemon: (pokemon: Pokemon) => ConcretePokemon = (pokemon) => {
   return {
-    id: pokemon.id,
+    id: getPokemonId(pokemon.name),
     name: pokemon.name,
     base_experience: pokemon.base_experience,
     height: pokemon.height,

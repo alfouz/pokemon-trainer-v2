@@ -17,7 +17,9 @@ function WildPokemonSection() {
 
   const handleCatch = () => {
     currentPokemon && addPokemon(currentPokemon);
+    removePokemon();
   };
+
   return (
     <Container>
       <SpriteContainer>

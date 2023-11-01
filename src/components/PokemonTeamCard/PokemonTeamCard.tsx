@@ -1,5 +1,5 @@
 import { ConcretePokemon } from "../../types/ownTypes";
-import { Container, StyledImage } from "./PokemonSmallCard.styles";
+import { Container, StyledImage } from "./PokemonTeamCard.styles";
 import NeutralImage from "../../assets/utils/neutralImage.png";
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   onClick?: (pokemon: ConcretePokemon) => void;
 };
 
-const PokemonSmallCard = ({ pokemon, onClick }: Props) => {
+const PokemonTeamCard = ({ pokemon, onClick }: Props) => {
   return (
     <Container onClick={() => onClick && onClick(pokemon)}>
       <StyledImage src={pokemon.sprite || NeutralImage}></StyledImage>
@@ -15,4 +15,4 @@ const PokemonSmallCard = ({ pokemon, onClick }: Props) => {
   );
 };
 
-export default PokemonSmallCard;
+export default PokemonTeamCard;

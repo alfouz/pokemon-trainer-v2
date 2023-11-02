@@ -9,6 +9,8 @@ interface PlayerState {
   removePokemon: (id: string) => void;
   addPokemonToTeam: (ownPokemon: ConcretePokemon) => void;
   removePokemonFromTeam: (id: string) => void;
+  removeBall: (ballIndex: number) => void;
+  getBall: (ballIndex: number) => void;
   options: { speed: number; maxPokemonId: number };
   inventory: { balls: [number, number, number, number] };
 }
@@ -39,6 +41,24 @@ const usePlayerState = create<PlayerState>()(
       removePokemonFromTeam: (id) =>
         set((state) => ({
           currentTeam: state.currentTeam.filter((p) => p.id !== id),
+        })),
+      removeBall: (ballIndex) =>
+        set((state) => ({
+          inventory: {
+            ...state.inventory,
+            balls: state.inventory.balls.map((b, index) =>
+              index === ballIndex ? b - 1 : b
+            ) as [number, number, number, number],
+          },
+        })),
+      getBall: (ballIndex) =>
+        set((state) => ({
+          inventory: {
+            ...state.inventory,
+            balls: state.inventory.balls.map((b, index) =>
+              index === ballIndex ? b + 1 : b
+            ) as [number, number, number, number],
+          },
         })),
     }),
     {

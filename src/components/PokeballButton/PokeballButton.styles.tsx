@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ disabled: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,11 +12,12 @@ export const Container = styled.div`
   background: white;
   cursor: pointer;
   user-select: none;
+  opacity: ${({ disabled }) => (disabled ? 0.7 : 1)};
   &:hover {
-    transform: scale(1.1);
+    transform: ${({ disabled }) => `scale(${disabled ? 1 : 1.1})`};
   }
   &:active {
-    transform: scale(1.05);
+    transform: ${({ disabled }) => `scale(${disabled ? 1 : 1.05})`};
   }
 `;
 

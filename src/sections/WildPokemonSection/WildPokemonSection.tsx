@@ -9,15 +9,17 @@ import useCatchPokemon from "../../hooks/useCatchPokemon";
 import WildPokemonCard from "../../components/WildPokemonCard/WildPokemonCard";
 import PokeballSelector from "../../components/PokeballSelector/PokeballSelector";
 import usePlayerState from "../../state/usePlayerState";
+import { getRandomNumberRange } from "../../utils/genericUtils";
+import PokemonBalls from "../../consts/PokemonBalls";
 
 function WildPokemonSection() {
   useCatchPokemon();
   const { removePokemon, currentPokemon } = useCurrentPokemon((s) => s);
-  const { addPokemon } = usePlayerState((s) => s);
+  const { getBall } = usePlayerState((s) => s);
 
-  const handleCatch = () => {
-    currentPokemon && addPokemon(currentPokemon);
-    removePokemon();
+  const getBallNow = () => {
+    const ball = getRandomNumberRange(0, Object.keys(PokemonBalls).length);
+    getBall(ball);
   };
 
   return (
@@ -31,7 +33,7 @@ function WildPokemonSection() {
       </SpriteContainer>
       <PokeballSelector />
       <BottomContainer>
-        <PokeButton onClick={handleCatch}>Catch</PokeButton>
+        <PokeButton onClick={getBallNow}>Give me ball</PokeButton>
         <PokeButton onClick={removePokemon}>Give me other</PokeButton>
       </BottomContainer>
     </Container>

@@ -33,6 +33,7 @@ const useBattleState = create<PlayerState>()((set) => ({
   hasWon: 0,
   battleStarted: false,
   startBattle: async (ownTeam, enemyTeam) => {
+    console.log(ownTeam);
     const [ownFirst, ...ownRest] = ownTeam.map((p) => assignLife(p));
     const [enemyFirst, ...enemyRest] = enemyTeam.map((p) => assignLife(p));
     set((state) => ({

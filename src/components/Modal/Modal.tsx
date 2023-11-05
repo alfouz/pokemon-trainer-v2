@@ -10,7 +10,7 @@ type Props = {
   onClose: () => void;
 };
 
-const GymBadge = ({ children, onClose }: Props) => {
+const Modal = ({ children, onClose }: Props) => {
   return (
     <Container>
       <InnerContainer>
@@ -21,4 +21,4 @@ const GymBadge = ({ children, onClose }: Props) => {
   );
 };
 
-export default GymBadge;
+export default Modal;

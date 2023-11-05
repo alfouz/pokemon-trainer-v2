@@ -1,4 +1,4 @@
-import { OwnType } from "./ownTypes";
+import { ConcretePokemon, OwnType } from "./ownTypes";
 
 export type PowerTypes = "low" | "mid" | "strong" | "extreme";
 
@@ -15,9 +15,20 @@ export type OwnStats = {
   [key in OwnStat]: number;
 };
 
+export type OwnMedalName =
+  | "Rock"
+  | "Cascade"
+  | "Thunder"
+  | "Rainbow"
+  | "Soul"
+  | "Marsh"
+  | "Volcano"
+  | "Earth";
+
 export type OwnMedal = {
-  name: string;
+  name: OwnMedalName;
   image: string;
+  team: ConcretePokemon[];
 };
 
 export type OwnBall = "pokeball" | "superball" | "ultraball" | "masterball";

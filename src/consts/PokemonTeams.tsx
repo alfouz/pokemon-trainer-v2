@@ -11,7 +11,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
     stats: {
-      hp: 50,
+      hp: 120,
       attack: 80,
       defense: 80,
       speed: 20,
@@ -31,7 +31,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
     stats: {
-      hp: 45,
+      hp: 120,
       attack: 55,
       defense: 120,
       speed: 70,

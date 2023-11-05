@@ -3,6 +3,7 @@ import { PokemonStat } from "../types/ImportedTypes";
 import { OwnType } from "../types/ownTypes";
 import { OwnStats, PowerTypes } from "../types/utilTypes";
 import { getRandomNumberRange } from "./genericUtils";
+import { getHP, getStat } from "./statFunctions";
 
 const movePowers: PowerTypes[] = ["low", "mid", "strong", "extreme"];
 const rangeModify = 0.2;
@@ -27,13 +28,13 @@ export const selectRandomStats: (stats: PokemonStat[]) => OwnStats = (
   stats: PokemonStat[]
 ) => {
   return {
-    hp: getRandomValue(stats[0].base_stat),
-    attack: getRandomValue(
-      Math.floor((stats[1].base_stat + stats[3].base_stat) / 2)
+    hp: getHP(getRandomValue(stats[0].base_stat)),
+    attack: getStat(
+      getRandomValue(Math.floor((stats[1].base_stat + stats[3].base_stat) / 2))
     ),
-    defense: getRandomValue(
-      Math.floor((stats[2].base_stat + stats[4].base_stat) / 2)
+    defense: getStat(
+      getRandomValue(Math.floor((stats[2].base_stat + stats[4].base_stat) / 2))
     ),
-    speed: getRandomValue(stats[5].base_stat),
+    speed: getStat(getRandomValue(stats[5].base_stat)),
   };
 };

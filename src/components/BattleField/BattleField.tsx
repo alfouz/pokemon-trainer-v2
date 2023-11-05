@@ -1,5 +1,7 @@
+import useBattlingPokemon from "../../hooks/useBattlingPokemon";
 import useBattleState from "../../state/useBattleState";
 import DetailsPokemonCard from "../DetailsPokemonCard/DetailsPokemonCard";
+import LifeBar from "../LifeBar/LifeBar";
 import PokeButton from "../PokeButton/PokeButton";
 import {
   CenterContainer,
@@ -10,20 +12,42 @@ import {
 } from "./BattleField.styles";
 
 const BattleField = () => {
-  const { enemyTeam, currentTeam, cleanTeams } = useBattleState();
+  const { cleanTeams, currentPokemon, enemyPokemon } = useBattleState();
+  const { cleanBattle } = useBattlingPokemon();
+
+  const handleForfeit = () => {
+    cleanBattle();
+    cleanTeams();
+  };
 
   return (
     <Container>
       <InnerContainer>
         <LeftContainer>
-          <DetailsPokemonCard pokemon={currentTeam[0]} />
+          {currentPokemon && (
+            <>
+              <DetailsPokemonCard pokemon={currentPokemon} />
+              <LifeBar
+                current={currentPokemon?.life}
+                total={currentPokemon?.stats.hp}
+              />
+            </>
+          )}
         </LeftContainer>
         <CenterContainer>
           Battle
-          <PokeButton onClick={cleanTeams}>Forfeit</PokeButton>
+          <PokeButton onClick={handleForfeit}>Forfeit</PokeButton>
         </CenterContainer>
         <RightContainer>
-          <DetailsPokemonCard pokemon={enemyTeam[0]} />
+          {enemyPokemon && (
+            <>
+              <DetailsPokemonCard pokemon={enemyPokemon} />
+              <LifeBar
+                current={enemyPokemon?.life}
+                total={enemyPokemon?.stats.hp}
+              />
+            </>
+          )}
         </RightContainer>
       </InnerContainer>
     </Container>

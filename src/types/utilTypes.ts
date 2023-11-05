@@ -29,3 +29,7 @@ export type OwnPokeball = {
   chance: number;
   index: number;
 };
+
+export type OwnPokemonType = {
+  name: string;
+};

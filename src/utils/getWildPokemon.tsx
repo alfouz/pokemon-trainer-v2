@@ -21,7 +21,7 @@ const getWildPokemon: (pokemon: Pokemon) => ConcretePokemon = (pokemon) => {
     move: getMove(selectRandomType(pokemon.types.map((t) => t.type.name))),
     sprite: pokemon.sprites.front_default,
     stats: selectRandomStats(pokemon.stats),
-    types: pokemon.types,
+    types: pokemon.types.map((t) => t.type),
   };
 };
 

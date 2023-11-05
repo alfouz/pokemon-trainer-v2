@@ -1,6 +1,5 @@
-import { PokemonType } from "./ImportedTypes";
 import PokemonTypes from "../consts/PokemonTypes";
-import { OwnMove, OwnStats } from "./utilTypes";
+import { OwnMove, OwnPokemonType, OwnStats } from "./utilTypes";
 
 export interface ConcretePokemon {
   id: string;
@@ -10,7 +9,7 @@ export interface ConcretePokemon {
   move: OwnMove;
   sprite: string | null;
   stats: OwnStats;
-  types: PokemonType[];
+  types: OwnPokemonType[];
 }
 
 export type OwnType = (typeof PokemonTypes)[number];

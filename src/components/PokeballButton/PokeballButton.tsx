@@ -10,7 +10,6 @@ type Props = {
 
 const PokeballButton = ({ pokeball, count, onClick, disabled }: Props) => {
   const handleClick = () => {
-    console.log(disabled);
     if (!disabled) {
       onClick();
     }

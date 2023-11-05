@@ -24,7 +24,7 @@ function WildPokemonCard({ pokemon }: Props) {
       <NameSpan>{getPokemonName(pokemon.name)}</NameSpan>
       <TypesContainer>
         {pokemon.types.map((type) => (
-          <TypeBadge type={type.type.name} key={type.type.name} />
+          <TypeBadge type={type.name} key={type.name} />
         ))}
       </TypesContainer>
       <StatsContainer>

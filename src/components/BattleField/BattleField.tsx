@@ -11,8 +11,14 @@ import {
   RightContainer,
 } from "./BattleField.styles";
 
+const getBattleText = (value: number) => {
+  if (value === 0) return "Battle";
+  if (value < 0) return "You loose";
+  if (value > 0) return "You win";
+};
+
 const BattleField = () => {
-  const { cleanTeams, currentPokemon, enemyPokemon } = useBattleState();
+  const { cleanTeams, currentPokemon, enemyPokemon, hasWon } = useBattleState();
   const { cleanBattle } = useBattlingPokemon();
 
   const handleForfeit = () => {
@@ -35,8 +41,10 @@ const BattleField = () => {
           )}
         </LeftContainer>
         <CenterContainer>
-          Battle
-          <PokeButton onClick={handleForfeit}>Forfeit</PokeButton>
+          <span>{getBattleText(hasWon)}</span>
+          <PokeButton onClick={handleForfeit}>
+            {!hasWon ? "Forfeit" : "Exit"}
+          </PokeButton>
         </CenterContainer>
         <RightContainer>
           {enemyPokemon && (

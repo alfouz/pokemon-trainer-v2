@@ -1,5 +1,8 @@
 import { create } from "zustand";
 import { ConcretePokemon } from "../types/ownTypes";
+import PokemonService from "../services/PokemonService";
+import selectPokemon from "../utils/selectPokemon";
+import getWildPokemon from "../utils/getWildPokemon";
 
 interface ConcretePokemonWithLife extends ConcretePokemon {
   life: number;
@@ -22,6 +25,7 @@ interface PlayerState {
     ownTeam: ConcretePokemon[],
     enemyTeam: ConcretePokemon[]
   ) => void;
+  startRandomBattle: (ownTeam: ConcretePokemon[], maxId: number) => void;
   cleanTeams: () => void;
   hasWon: number;
   battleStarted: boolean;
@@ -33,9 +37,31 @@ const useBattleState = create<PlayerState>()((set) => ({
   hasWon: 0,
   battleStarted: false,
   startBattle: async (ownTeam, enemyTeam) => {
-    console.log(ownTeam);
     const [ownFirst, ...ownRest] = ownTeam.map((p) => assignLife(p));
     const [enemyFirst, ...enemyRest] = enemyTeam.map((p) => assignLife(p));
+    set((state) => ({
+      ...state,
+      currentPokemon: ownFirst,
+      currentTeam: ownRest,
+      enemyPokemon: enemyFirst,
+      enemyTeam: enemyRest,
+      hasWon: 0,
+      battleStarted: true,
+    }));
+  },
+  startRandomBattle: async (ownTeam, maxId) => {
+    const randomTeam = await Promise.all(
+      Array(6)
+        .fill(0)
+        .map(async () => {
+          const pokemon = await PokemonService.getPokemonDetails(
+            selectPokemon(maxId).id
+          );
+          return getWildPokemon(pokemon);
+        })
+    );
+    const [ownFirst, ...ownRest] = ownTeam.map((p) => assignLife(p));
+    const [enemyFirst, ...enemyRest] = randomTeam.map((p) => assignLife(p));
     set((state) => ({
       ...state,
       currentPokemon: ownFirst,

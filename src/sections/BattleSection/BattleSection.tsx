@@ -4,11 +4,14 @@ import usePlayerState from "../../state/usePlayerState";
 import { ButtonStyled, Container } from "./BattleSection.styles";
 
 function BattleSection() {
-  const { startBattle, battleStarted } = useBattleState();
-  const { currentTeam, pokemons } = usePlayerState();
+  const { battleStarted, startRandomBattle } = useBattleState();
+  const {
+    currentTeam,
+    options: { maxPokemonId },
+  } = usePlayerState();
 
   const handleStartBattle = () => {
-    startBattle(currentTeam, pokemons.slice(0, 2));
+    startRandomBattle(currentTeam, maxPokemonId);
   };
 
   return (

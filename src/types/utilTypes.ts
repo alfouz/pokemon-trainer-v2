@@ -44,3 +44,11 @@ export type OwnPokeball = {
 export type OwnPokemonType = {
   name: string;
 };
+
+export type OwnTiers =
+  | "common"
+  | "rare"
+  | "veryrare"
+  | "legendary"
+  | "mythic"
+  | "final";

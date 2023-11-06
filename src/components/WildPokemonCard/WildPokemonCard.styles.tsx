@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { OwnTiers } from "../../types/utilTypes";
 
-export const Container = styled.div`
+export const Container = styled.div<{ tier: OwnTiers }>`
   width: 256px;
   height: 344px;
   display: flex;
@@ -8,7 +9,7 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   border: 2px solid black;
-  background: white;
+  background: ${({ tier, theme }) => theme.colors.tier[tier] || "white"};
   border-radius: 8px;
 `;
 

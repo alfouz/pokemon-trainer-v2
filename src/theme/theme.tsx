@@ -26,6 +26,14 @@ const theme = {
       defense: "#fae078",
       speed: "#fa92b2",
     },
+    tier: {
+      common: "#ffffff",
+      rare: "#ccdefb",
+      veryrare: "#baa7ff",
+      legendary: "#ff9a9e",
+      mythic: "#fffab7",
+      final: "#fdacfa",
+    },
   },
 };
 

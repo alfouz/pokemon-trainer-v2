@@ -19,7 +19,7 @@ type Props = {
 
 function WildPokemonCard({ pokemon }: Props) {
   return (
-    <Container>
+    <Container tier={pokemon.tier}>
       {pokemon.sprite && <SpriteImage src={pokemon.sprite} />}
       <NameSpan>{getPokemonName(pokemon.name)}</NameSpan>
       <TypesContainer>

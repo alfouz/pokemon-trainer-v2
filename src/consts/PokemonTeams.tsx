@@ -21,6 +21,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
         name: "rock",
       },
     ],
+    tier: "common",
   },
   {
     id: "onix-rock-gym",
@@ -41,5 +42,6 @@ export const RockBadgeTeam: ConcretePokemon[] = [
         name: "rock",
       },
     ],
+    tier: "common",
   },
 ];

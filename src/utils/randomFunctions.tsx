@@ -8,12 +8,12 @@ import { getHP, getStat } from "./statFunctions";
 const movePowers: PowerTypes[] = ["low", "mid", "strong", "extreme"];
 const rangeModify = 0.2;
 const tierRanges: { [key in OwnTiers]: number } = {
-  common: 500,
-  rare: 700,
-  veryrare: 850,
-  legendary: 950,
-  mythic: 990,
-  final: 998,
+  common: 7000,
+  rare: 8000,
+  veryrare: 9000,
+  legendary: 9700,
+  mythic: 9950,
+  final: 9990,
 };
 const moveChances = [45, 30, 20, 5];
 
@@ -46,9 +46,10 @@ export const selectRandomType = (types: OwnType[]) => {
 };
 
 const getRandomValue = (statValue: number, tier: OwnTiers) => {
-  const range = (statValue + tierImprovements[tier]) * rangeModify;
-  const minValue = Math.floor(statValue - range);
-  const maxValue = Math.floor(statValue + range);
+  const baseValue = statValue + tierImprovements[tier];
+  const range = baseValue * rangeModify;
+  const minValue = Math.floor(baseValue - range);
+  const maxValue = Math.floor(baseValue + range);
   return getRandomNumberRange(minValue, maxValue);
 };
 
@@ -75,7 +76,7 @@ export const selectRandomStats: (
 };
 
 export const getRandomTier: () => OwnTiers = () => {
-  const randomValue = getRandomNumberRange(0, 1000);
+  const randomValue = getRandomNumberRange(0, 10000);
 
   if (randomValue < tierRanges.common) {
     return "common";

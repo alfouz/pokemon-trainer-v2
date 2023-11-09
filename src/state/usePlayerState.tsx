@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { ConcretePokemon } from "../types/ownTypes";
+import { OwnZone } from "../types/utilTypes";
 
 interface PlayerState {
   currentTeam: ConcretePokemon[];
@@ -13,6 +14,9 @@ interface PlayerState {
   getBall: (ballIndex: number) => void;
   options: { speed: number; maxPokemonId: number };
   inventory: { balls: [number, number, number, number] };
+  progress: number;
+  currentZone: OwnZone;
+  setCurrentZone: (cZ: OwnZone) => void;
 }
 
 const usePlayerState = create<PlayerState>()(
@@ -22,6 +26,8 @@ const usePlayerState = create<PlayerState>()(
       pokemons: [],
       inventory: { balls: [1, 1, 1, 1] },
       options: { maxPokemonId: 150, speed: 200 },
+      progress: 8,
+      currentZone: "ranch",
       addPokemon: (newPokemon) =>
         set((state) =>
           state.currentTeam.length <= 40
@@ -59,6 +65,14 @@ const usePlayerState = create<PlayerState>()(
               index === ballIndex ? b + 1 : b
             ) as [number, number, number, number],
           },
+        })),
+      increaseProgress: () =>
+        set((state) => ({
+          progress: state.progress + 1,
+        })),
+      setCurrentZone: (cZ) =>
+        set(() => ({
+          currentZone: cZ,
         })),
     }),
     {

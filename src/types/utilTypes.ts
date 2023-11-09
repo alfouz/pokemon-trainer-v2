@@ -52,3 +52,27 @@ export type OwnTiers =
   | "legendary"
   | "mythic"
   | "final";
+
+export type OwnZone =
+  | "city"
+  | "classic"
+  | "dessert"
+  | "flower"
+  | "grocery"
+  | "night"
+  | "oversky"
+  | "ranch"
+  | "sea"
+  | "sky"
+  | "snow"
+  | "space"
+  | "theater"
+  | "underground"
+  | "undersea"
+  | "unknown"
+  | "volcan";
+
+export type PokemonZone = {
+  name: string;
+  image: string;
+};

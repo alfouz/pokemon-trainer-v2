@@ -2,6 +2,7 @@ import {
   BottomContainer,
   Container,
   SpriteContainer,
+  ZonesContainer,
 } from "./WildPokemonSection.styles";
 import PokeButton from "../../components/PokeButton/PokeButton";
 import useCurrentPokemon from "../../state/useCurrentPokemon";
@@ -11,16 +12,23 @@ import PokeballSelector from "../../components/PokeballSelector/PokeballSelector
 import usePlayerState from "../../state/usePlayerState";
 import { getRandomNumberRange } from "../../utils/genericUtils";
 import PokemonBalls from "../../consts/PokemonBalls";
+import PokemonZones, { ZonesByProgress } from "../../consts/PokemonZones";
+import PokemonZone from "../../components/PokemonZone/PokemonZone";
+import { OwnZone } from "../../types/utilTypes";
 
 function WildPokemonSection() {
   useCatchPokemon();
   const { removePokemon, currentPokemon } = useCurrentPokemon((s) => s);
-  const { getBall } = usePlayerState((s) => s);
+  const { getBall, progress, currentZone, setCurrentZone } = usePlayerState(
+    (s) => s
+  );
 
   const getBallNow = () => {
     const ball = getRandomNumberRange(0, Object.keys(PokemonBalls).length);
     getBall(ball);
   };
+
+  const zones = ZonesByProgress.slice(0, progress + 1).flat();
 
   return (
     <Container>
@@ -36,6 +44,15 @@ function WildPokemonSection() {
         <PokeButton onClick={getBallNow}>Give me ball</PokeButton>
         <PokeButton onClick={removePokemon}>Give me other</PokeButton>
       </BottomContainer>
+      <ZonesContainer>
+        {zones.map((pZ) => (
+          <PokemonZone
+            zone={PokemonZones[pZ as OwnZone]}
+            selected={pZ === currentZone}
+            onClick={() => setCurrentZone(pZ)}
+          />
+        ))}
+      </ZonesContainer>
     </Container>
   );
 }

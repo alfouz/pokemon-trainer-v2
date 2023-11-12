@@ -18,12 +18,18 @@ const getBattleText = (value: number) => {
 };
 
 const BattleField = () => {
-  const { cleanTeams, currentPokemon, enemyPokemon, hasWon } = useBattleState();
+  const { cleanTeams, currentPokemon, enemyPokemon, hasWon, onFinishBattle } =
+    useBattleState();
   const { cleanBattle } = useBattlingPokemon();
 
   const handleForfeit = () => {
     cleanBattle();
     cleanTeams();
+  };
+
+  const handleWin = () => {
+    handleForfeit();
+    onFinishBattle && onFinishBattle();
   };
 
   return (
@@ -42,7 +48,7 @@ const BattleField = () => {
         </LeftContainer>
         <CenterContainer>
           <span>{getBattleText(hasWon)}</span>
-          <PokeButton onClick={handleForfeit}>
+          <PokeButton onClick={hasWon ? handleWin : handleForfeit}>
             {!hasWon ? "Forfeit" : "Exit"}
           </PokeButton>
         </CenterContainer>

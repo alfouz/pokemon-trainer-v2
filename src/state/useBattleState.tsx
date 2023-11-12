@@ -23,12 +23,14 @@ interface PlayerState {
   damageEnemyPokemon: (damage: number) => number;
   startBattle: (
     ownTeam: ConcretePokemon[],
-    enemyTeam: ConcretePokemon[]
+    enemyTeam: ConcretePokemon[],
+    callback?: () => void
   ) => void;
   startRandomBattle: (ownTeam: ConcretePokemon[], maxId: number) => void;
   cleanTeams: () => void;
   hasWon: number;
   battleStarted: boolean;
+  onFinishBattle?: () => void;
 }
 
 const useBattleState = create<PlayerState>()((set) => ({
@@ -36,7 +38,7 @@ const useBattleState = create<PlayerState>()((set) => ({
   enemyTeam: [],
   hasWon: 0,
   battleStarted: false,
-  startBattle: async (ownTeam, enemyTeam) => {
+  startBattle: async (ownTeam, enemyTeam, callback) => {
     const [ownFirst, ...ownRest] = ownTeam.map((p) => assignLife(p));
     const [enemyFirst, ...enemyRest] = enemyTeam.map((p) => assignLife(p));
     set((state) => ({
@@ -47,6 +49,7 @@ const useBattleState = create<PlayerState>()((set) => ({
       enemyTeam: enemyRest,
       hasWon: 0,
       battleStarted: true,
+      onFinishBattle: callback,
     }));
   },
   startRandomBattle: async (ownTeam, maxId) => {

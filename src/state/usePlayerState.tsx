@@ -17,6 +17,7 @@ interface PlayerState {
   progress: number;
   currentZone: OwnZone;
   setCurrentZone: (cZ: OwnZone) => void;
+  setProgress: (p: number) => void;
 }
 
 const usePlayerState = create<PlayerState>()(
@@ -26,7 +27,7 @@ const usePlayerState = create<PlayerState>()(
       pokemons: [],
       inventory: { balls: [1, 1, 1, 1] },
       options: { maxPokemonId: 150, speed: 200 },
-      progress: 8,
+      progress: 0,
       currentZone: "ranch",
       addPokemon: (newPokemon) =>
         set((state) =>
@@ -66,9 +67,9 @@ const usePlayerState = create<PlayerState>()(
             ) as [number, number, number, number],
           },
         })),
-      increaseProgress: () =>
+      setProgress: (p) =>
         set((state) => ({
-          progress: state.progress + 1,
+          progress: state.progress > p ? state.progress : p,
         })),
       setCurrentZone: (cZ) =>
         set(() => ({

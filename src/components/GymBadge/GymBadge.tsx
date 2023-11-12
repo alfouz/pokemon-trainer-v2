@@ -4,12 +4,13 @@ import { Container, StyledImage } from "./GymBadge.styles";
 type Props = {
   badge: OwnMedal;
   onClick: () => void;
+  disabled: boolean;
 };
 
-const GymBadge = ({ badge, onClick }: Props) => {
+const GymBadge = ({ badge, onClick, disabled }: Props) => {
   return (
-    <Container onClick={onClick}>
-      <StyledImage src={badge.image}></StyledImage>
+    <Container onClick={!disabled ? onClick : () => {}} disabled={disabled}>
+      <StyledImage src={badge.image} disabled={disabled}></StyledImage>
     </Container>
   );
 };

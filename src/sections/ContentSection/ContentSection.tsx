@@ -12,16 +12,23 @@ import {
 
 function ContentSection() {
   const { startBattle } = useBattleState();
-  const { currentTeam } = usePlayerState();
+  const { currentTeam, setProgress, progress } = usePlayerState();
+
+  const getBadge = (b: number) => () => {
+    setProgress(b);
+  };
 
   return (
     <Container>
       <MedalContainer>
-        {PokemonBadges.map((pK) => (
+        {PokemonBadges.map((pK, index) => (
           <GymBadge
             badge={pK}
             key={pK.name}
-            onClick={() => startBattle(currentTeam, pK.team)}
+            disabled={index > progress}
+            onClick={() =>
+              startBattle(currentTeam, pK.team, getBadge(index + 1))
+            }
           />
         ))}
       </MedalContainer>

@@ -1,4 +1,6 @@
-const PokemonList = [
+import { PokemonIndex } from "../types/utilTypes";
+
+const PokemonList: PokemonIndex[] = [
   {
     name: "bulbasaur",
     id: 1,

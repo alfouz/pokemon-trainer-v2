@@ -4,15 +4,18 @@ import selectPokemon from "../utils/selectPokemon";
 import useCurrentPokemon from "../state/useCurrentPokemon";
 
 const useCatchPokemon = () => {
-  const { speed, maxPokemonId } = usePlayerState((s) => s.options);
+  const {
+    options: { speed },
+    currentZone,
+  } = usePlayerState((s) => s);
   const { getPokemon, currentPokemon } = useCurrentPokemon((s) => s);
   useEffect(() => {
     if (!currentPokemon) {
       setTimeout(() => {
-        getPokemon(selectPokemon(maxPokemonId).id);
+        getPokemon(selectPokemon(currentZone).id);
       }, speed);
     }
-  }, [currentPokemon, getPokemon, maxPokemonId, speed]);
+  }, [currentPokemon, getPokemon, currentZone, speed]);
 };
 
 export default useCatchPokemon;

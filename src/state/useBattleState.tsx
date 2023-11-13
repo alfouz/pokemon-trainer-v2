@@ -3,6 +3,7 @@ import { ConcretePokemon } from "../types/ownTypes";
 import PokemonService from "../services/PokemonService";
 import selectPokemon from "../utils/selectPokemon";
 import getWildPokemon from "../utils/getWildPokemon";
+import { OwnZone } from "../types/utilTypes";
 
 interface ConcretePokemonWithLife extends ConcretePokemon {
   life: number;
@@ -26,7 +27,7 @@ interface PlayerState {
     enemyTeam: ConcretePokemon[],
     callback?: () => void
   ) => void;
-  startRandomBattle: (ownTeam: ConcretePokemon[], maxId: number) => void;
+  startRandomBattle: (ownTeam: ConcretePokemon[], zone: OwnZone) => void;
   cleanTeams: () => void;
   hasWon: number;
   battleStarted: boolean;
@@ -52,13 +53,13 @@ const useBattleState = create<PlayerState>()((set) => ({
       onFinishBattle: callback,
     }));
   },
-  startRandomBattle: async (ownTeam, maxId) => {
+  startRandomBattle: async (ownTeam, zone) => {
     const randomTeam = await Promise.all(
       Array(6)
         .fill(0)
         .map(async () => {
           const pokemon = await PokemonService.getPokemonDetails(
-            selectPokemon(maxId).id
+            selectPokemon(zone).id
           );
           return getWildPokemon(pokemon);
         })

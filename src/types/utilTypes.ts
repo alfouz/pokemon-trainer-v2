@@ -76,3 +76,14 @@ export type PokemonZone = {
   name: string;
   image: string;
 };
+
+export type PokemonIndex = {
+  name: string;
+  id: number;
+};
+
+export type PokemonChance = {
+  index: number;
+  chance: number; // 20 common, 1 rare
+  name: string;
+};

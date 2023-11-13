@@ -5,13 +5,10 @@ import { ButtonStyled, Container } from "./BattleSection.styles";
 
 function BattleSection() {
   const { battleStarted, startRandomBattle } = useBattleState();
-  const {
-    currentTeam,
-    options: { maxPokemonId },
-  } = usePlayerState();
+  const { currentTeam, currentZone } = usePlayerState();
 
   const handleStartBattle = () => {
-    startRandomBattle(currentTeam, maxPokemonId);
+    startRandomBattle(currentTeam, currentZone);
   };
 
   return (

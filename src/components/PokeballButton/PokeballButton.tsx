@@ -18,7 +18,7 @@ const PokeballButton = ({ pokeball, count, onClick, disabled }: Props) => {
   return (
     <Container title={pokeball.name} onClick={handleClick} disabled={disabled}>
       <StyledImg src={pokeball.image} />
-      <StyledSpan>{count}</StyledSpan>
+      <StyledSpan>{pokeball.index === 0 ? "∞" : count}</StyledSpan>
     </Container>
   );
 };

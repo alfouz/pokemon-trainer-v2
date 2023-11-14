@@ -5,6 +5,7 @@ export const Container = styled.div`
   padding: 40px 4px;
   display: grid;
   grid-template-rows: 1fr 80px 1fr auto;
+  position: relative;
 `;
 
 export const SpriteContainer = styled.div`

@@ -8,7 +8,11 @@ import { getRandomNumberRange } from "../../utils/genericUtils";
 
 const maxPokemonInBox = 40;
 
-const PokeballSelector = () => {
+type Props = {
+  onCatch: (text: string) => void;
+};
+
+const PokeballSelector = ({ onCatch }: Props) => {
   const { removePokemon, currentPokemon } = useCurrentPokemon((s) => s);
   const {
     addPokemon,
@@ -18,10 +22,17 @@ const PokeballSelector = () => {
   } = usePlayerState((s) => s);
 
   const handleCatch = (chance: number, index: number) => {
-    removeBall(index);
+    if (index !== 0) {
+      removeBall(index);
+    }
     const value = getRandomNumberRange(0, 100);
     if (value < chance) {
       currentPokemon && addPokemon(currentPokemon);
+      onCatch("Catched");
+    } else {
+      onCatch("It has escaped");
+    }
+    if (currentPokemon) {
       removePokemon();
     }
   };

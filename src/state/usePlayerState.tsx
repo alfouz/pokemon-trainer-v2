@@ -12,7 +12,7 @@ interface PlayerState {
   removePokemonFromTeam: (id: string) => void;
   removeBall: (ballIndex: number) => void;
   getBall: (ballIndex: number) => void;
-  options: { speed: number; maxPokemonId: number };
+  options: { speed: number };
   inventory: { balls: [number, number, number, number] };
   progress: number;
   currentZone: OwnZone;
@@ -25,8 +25,8 @@ const usePlayerState = create<PlayerState>()(
     (set) => ({
       currentTeam: [],
       pokemons: [],
-      inventory: { balls: [1, 1, 1, 1] },
-      options: { maxPokemonId: 150, speed: 200 },
+      inventory: { balls: [1, 1, 0, 0] },
+      options: { speed: 2000 },
       progress: 0,
       currentZone: "ranch",
       addPokemon: (newPokemon) =>

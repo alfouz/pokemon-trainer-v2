@@ -4,6 +4,7 @@ import {
   SpriteContainer,
   ZonesContainer,
 } from "./WildPokemonSection.styles";
+import { useState } from "react";
 import PokeButton from "../../components/PokeButton/PokeButton";
 import useCurrentPokemon from "../../state/useCurrentPokemon";
 import useCatchPokemon from "../../hooks/useCatchPokemon";
@@ -15,6 +16,7 @@ import PokemonBalls from "../../consts/PokemonBalls";
 import PokemonZones, { ZonesByProgress } from "../../consts/PokemonZones";
 import PokemonZone from "../../components/PokemonZone/PokemonZone";
 import { OwnZone } from "../../types/utilTypes";
+import Notification from "../../components/Notification/Notification";
 
 function WildPokemonSection() {
   useCatchPokemon();
@@ -27,6 +29,7 @@ function WildPokemonSection() {
     const ball = getRandomNumberRange(0, Object.keys(PokemonBalls).length);
     getBall(ball);
   };
+  const [notificationText, setNotificationText] = useState("");
 
   const zones = ZonesByProgress.slice(0, progress + 1).flat();
 
@@ -39,7 +42,7 @@ function WildPokemonSection() {
           <span>LOADING</span>
         )}
       </SpriteContainer>
-      <PokeballSelector />
+      <PokeballSelector onCatch={(text: string) => setNotificationText(text)} />
       <BottomContainer>
         <PokeButton onClick={getBallNow}>Give me ball</PokeButton>
         <PokeButton onClick={removePokemon}>Give me other</PokeButton>
@@ -53,6 +56,10 @@ function WildPokemonSection() {
           />
         ))}
       </ZonesContainer>
+      <Notification
+        text={notificationText}
+        onClose={() => setNotificationText("")}
+      />
     </Container>
   );
 }

@@ -27,7 +27,11 @@ interface PlayerState {
     enemyTeam: ConcretePokemon[],
     callback?: () => void
   ) => void;
-  startRandomBattle: (ownTeam: ConcretePokemon[], zone: OwnZone) => void;
+  startRandomBattle: (
+    ownTeam: ConcretePokemon[],
+    zone: OwnZone,
+    callback?: () => void
+  ) => void;
   cleanTeams: () => void;
   hasWon: number;
   battleStarted: boolean;
@@ -53,7 +57,7 @@ const useBattleState = create<PlayerState>()((set) => ({
       onFinishBattle: callback,
     }));
   },
-  startRandomBattle: async (ownTeam, zone) => {
+  startRandomBattle: async (ownTeam, zone, callback) => {
     const randomTeam = await Promise.all(
       Array(6)
         .fill(0)
@@ -74,6 +78,7 @@ const useBattleState = create<PlayerState>()((set) => ({
       enemyTeam: enemyRest,
       hasWon: 0,
       battleStarted: true,
+      onFinishBattle: callback,
     }));
   },
   damageCurrentPokemon: (damage) => {

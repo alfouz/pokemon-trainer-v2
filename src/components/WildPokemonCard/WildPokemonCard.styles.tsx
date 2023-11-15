@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { OwnTiers } from "../../types/utilTypes";
+import { strippedCSS } from "../../utils/stylingFunctions";
 
 export const Container = styled.div<{ tier: OwnTiers }>`
   width: 256px;
@@ -9,7 +10,8 @@ export const Container = styled.div<{ tier: OwnTiers }>`
   justify-content: flex-start;
   align-items: center;
   border: 2px solid black;
-  background: ${({ tier, theme }) => theme.colors.tier[tier] || "white"};
+  background: white;
+  ${({ tier, theme }) => strippedCSS(theme.colors.tier[tier])};
   border-radius: 8px;
 `;
 

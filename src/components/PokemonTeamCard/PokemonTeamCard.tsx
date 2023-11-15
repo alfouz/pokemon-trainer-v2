@@ -9,7 +9,7 @@ type Props = {
 
 const PokemonTeamCard = ({ pokemon, onClick }: Props) => {
   return (
-    <Container onClick={() => onClick && onClick(pokemon)}>
+    <Container onClick={() => onClick && onClick(pokemon)} tier={pokemon.tier}>
       <StyledImage src={pokemon.sprite || NeutralImage}></StyledImage>
     </Container>
   );

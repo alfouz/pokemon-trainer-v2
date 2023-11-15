@@ -31,8 +31,11 @@ const theme = {
       rare: "#ccdefb",
       veryrare: "#baa7ff",
       legendary: "#ff9a9e",
-      mythic: "#fffab7",
+      mythic: "#f5ea4b",
       final: "#fdacfa",
+    },
+    general: {
+      border: "#c9c9c9",
     },
   },
 };

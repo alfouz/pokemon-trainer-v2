@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 100%;
   width: 100%;
-  background: purple;
+  background: #231e2f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ export const ButtonStyled = styled.div`
   width: 512px;
   border: 2px solid #000;
   font-weight: 500;
-  background: #ff5eff;
+  background: #f56161;
   cursor: pointer;
   display: flex;
   user-select: none;

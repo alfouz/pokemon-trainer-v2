@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: orange;
   display: flex;
   flex-direction: column;
-  padding: 4px;
+  padding: 8px;
+  border-top: 2px solid ${({ theme }) => theme.colors.general.border};
+  border-left: 2px solid ${({ theme }) => theme.colors.general.border};
+  background: #2f4c55;
 `;
 
 export const StyledImage = styled.img`

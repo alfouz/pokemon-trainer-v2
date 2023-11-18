@@ -3,6 +3,7 @@ import useBattleState from "../../state/useBattleState";
 import DetailsPokemonCard from "../DetailsPokemonCard/DetailsPokemonCard";
 import LifeBar from "../LifeBar/LifeBar";
 import PokeButton from "../PokeButton/PokeButton";
+import PokemonAliveIndicator from "../PokemonAliveIndicator/PokemonAliveIndicator";
 import {
   CenterContainer,
   Container,
@@ -18,8 +19,15 @@ const getBattleText = (value: number) => {
 };
 
 const BattleField = () => {
-  const { cleanTeams, currentPokemon, enemyPokemon, hasWon, onFinishBattle } =
-    useBattleState();
+  const {
+    cleanTeams,
+    currentPokemon,
+    enemyPokemon,
+    hasWon,
+    onFinishBattle,
+    currentTeam,
+    enemyTeam,
+  } = useBattleState();
   const { cleanBattle } = useBattlingPokemon();
 
   const handleForfeit = () => {
@@ -36,6 +44,7 @@ const BattleField = () => {
     <Container>
       <InnerContainer>
         <LeftContainer>
+          <PokemonAliveIndicator total={currentTeam?.length} />
           {currentPokemon && (
             <>
               <DetailsPokemonCard pokemon={currentPokemon} showTier={false} />
@@ -53,6 +62,7 @@ const BattleField = () => {
           </PokeButton>
         </CenterContainer>
         <RightContainer>
+          <PokemonAliveIndicator total={enemyTeam?.length} />
           {enemyPokemon && (
             <>
               <DetailsPokemonCard pokemon={enemyPokemon} showTier={false} />

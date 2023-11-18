@@ -9,6 +9,11 @@ import VolcanoBadge from "../assets/badges/Volcano_Badge.png";
 import { OwnMedal } from "../types/utilTypes";
 import {
   ElectricBadgeTeam,
+  FireBadgeTeam,
+  GrassBadgeTeam,
+  GroundBadgeTeam,
+  PoisonBadgeTeam,
+  PsychicBadgeTeam,
   RockBadgeTeam,
   WaterBadgeTeam,
 } from "./PokemonTeams";
@@ -17,11 +22,11 @@ const PokemonBadges: OwnMedal[] = [
   { name: "Rock", image: BoulderBadge, team: RockBadgeTeam },
   { name: "Cascade", image: CascadeBadge, team: WaterBadgeTeam },
   { name: "Thunder", image: ThunderBadge, team: ElectricBadgeTeam },
-  { name: "Rainbow", image: RainbowBadge, team: RockBadgeTeam },
-  { name: "Soul", image: SoulBadge, team: RockBadgeTeam },
-  { name: "Marsh", image: MarshBadge, team: RockBadgeTeam },
-  { name: "Volcano", image: VolcanoBadge, team: RockBadgeTeam },
-  { name: "Earth", image: EarthBadge, team: RockBadgeTeam },
+  { name: "Rainbow", image: RainbowBadge, team: GrassBadgeTeam },
+  { name: "Soul", image: SoulBadge, team: PoisonBadgeTeam },
+  { name: "Marsh", image: MarshBadge, team: PsychicBadgeTeam },
+  { name: "Volcano", image: VolcanoBadge, team: FireBadgeTeam },
+  { name: "Earth", image: EarthBadge, team: GroundBadgeTeam },
 ];
 
 export default PokemonBadges;

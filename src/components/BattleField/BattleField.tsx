@@ -38,7 +38,7 @@ const BattleField = () => {
         <LeftContainer>
           {currentPokemon && (
             <>
-              <DetailsPokemonCard pokemon={currentPokemon} />
+              <DetailsPokemonCard pokemon={currentPokemon} showTier={false} />
               <LifeBar
                 current={currentPokemon?.life}
                 total={currentPokemon?.stats.hp}
@@ -55,7 +55,7 @@ const BattleField = () => {
         <RightContainer>
           {enemyPokemon && (
             <>
-              <DetailsPokemonCard pokemon={enemyPokemon} />
+              <DetailsPokemonCard pokemon={enemyPokemon} showTier={false} />
               <LifeBar
                 current={enemyPokemon?.life}
                 total={enemyPokemon?.stats.hp}

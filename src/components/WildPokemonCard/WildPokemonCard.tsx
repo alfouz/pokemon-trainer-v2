@@ -1,3 +1,4 @@
+import tierTags from "../../language/TiersTags";
 import { getPokemonName } from "../../language/location";
 import { ConcretePokemon } from "../../types/ownTypes";
 import { OwnStat } from "../../types/utilTypes";
@@ -10,6 +11,7 @@ import {
   NameSpan,
   SpriteImage,
   StatsContainer,
+  TierTag,
   TypesContainer,
 } from "./WildPokemonCard.styles";
 
@@ -21,6 +23,9 @@ function WildPokemonCard({ pokemon }: Props) {
   return (
     <Container tier={pokemon.tier}>
       {pokemon.sprite && <SpriteImage src={pokemon.sprite} />}
+      {pokemon.tier !== "common" && (
+        <TierTag tier={pokemon.tier}>{tierTags[pokemon.tier]}</TierTag>
+      )}
       <NameSpan>{getPokemonName(pokemon.name)}</NameSpan>
       <TypesContainer>
         {pokemon.types.map((type) => (

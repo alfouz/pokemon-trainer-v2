@@ -12,6 +12,8 @@ export const Container = styled.div`
 export const InnerContainer = styled.div`
   background: white;
   border: 1px solid black;
+  padding: 12px;
+  border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 `;

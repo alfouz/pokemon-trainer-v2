@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { OwnTiers } from "../../types/utilTypes";
 
 export const Container = styled.div`
   width: 256px;
-  height: 344px;
+  padding: 12px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -13,6 +14,11 @@ export const Container = styled.div`
 
 export const NameSpan = styled.span`
   color: black;
+  font-weight: bold;
+`;
+
+export const TierTag = styled.span<{ tier: OwnTiers }>`
+  color: ${({ tier, theme }) => theme.colors.tier[tier]};
   font-weight: bold;
 `;
 

@@ -1,3 +1,4 @@
+import tierTags from "../../language/TiersTags";
 import { getPokemonName } from "../../language/location";
 import { ConcretePokemon } from "../../types/ownTypes";
 import { OwnStat } from "../../types/utilTypes";
@@ -10,17 +11,22 @@ import {
   NameSpan,
   SpriteImage,
   StatsContainer,
+  TierTag,
   TypesContainer,
 } from "./DetailsPokemonCard.styles";
 
 type Props = {
   pokemon: ConcretePokemon;
+  showTier?: boolean;
 };
 
-function DetailsPokemonCard({ pokemon }: Props) {
+function DetailsPokemonCard({ pokemon, showTier = true }: Props) {
   return (
     <Container>
       {pokemon.sprite && <SpriteImage src={pokemon.sprite} />}
+      {pokemon.tier !== "common" && showTier && (
+        <TierTag tier={pokemon.tier}>{tierTags[pokemon.tier]}</TierTag>
+      )}
       <NameSpan>{getPokemonName(pokemon.name)}</NameSpan>
       <TypesContainer>
         {pokemon.types.map((type) => (

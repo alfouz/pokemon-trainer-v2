@@ -8,14 +8,14 @@ import { getHP, getStat } from "./statFunctions";
 const movePowers: PowerTypes[] = ["low", "mid", "strong", "extreme"];
 const rangeModify = 0.2;
 const tierRanges: { [key in OwnTiers]: number } = {
-  common: 7000,
-  rare: 8000,
-  veryrare: 9000,
-  legendary: 9700,
-  mythic: 9950,
-  final: 9990,
+  common: 6000,
+  rare: 8500,
+  veryrare: 9850,
+  legendary: 9950,
+  mythic: 9995,
+  final: 9999,
 };
-const moveChances = [45, 30, 20, 5];
+const moveChances = [50, 35, 10, 5];
 
 const tierImprovements: { [key in OwnTiers]: number } = {
   common: 0,

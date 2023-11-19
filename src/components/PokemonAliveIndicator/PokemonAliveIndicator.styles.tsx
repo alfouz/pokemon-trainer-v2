@@ -10,5 +10,5 @@ export const PokeballIndicator = styled.div`
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #dd9898;
+  background: #cf4343;
 `;

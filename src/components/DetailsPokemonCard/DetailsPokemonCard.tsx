@@ -1,4 +1,4 @@
-import tierTags from "../../language/TiersTags";
+import tierTags from "../../language/tiersTags";
 import { getPokemonName } from "../../language/location";
 import { ConcretePokemon } from "../../types/ownTypes";
 import { OwnStat } from "../../types/utilTypes";

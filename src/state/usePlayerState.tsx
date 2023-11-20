@@ -26,7 +26,7 @@ const usePlayerState = create<PlayerState>()(
       currentTeam: [],
       pokemons: [],
       inventory: { balls: [1, 1, 0, 0] },
-      options: { speed: 2000 },
+      options: { speed: 5000 },
       progress: 0,
       currentZone: "ranch",
       addPokemon: (newPokemon) =>

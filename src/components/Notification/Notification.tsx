@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Container } from "./Notification.styles";
 
 type Props = {
@@ -7,11 +7,16 @@ type Props = {
 };
 
 const Notification = ({ text, onClose }: Props) => {
+  const [currentTimeout, setCurrentTimeout] = useState<number>();
   useEffect(() => {
-    setTimeout(() => {
-      onClose && onClose();
-    }, 2000);
-  }, [text, onClose]);
+    if (!currentTimeout) {
+      const timeout = setTimeout(() => {
+        onClose && onClose();
+        setCurrentTimeout(undefined);
+      }, 2000);
+      setCurrentTimeout(timeout);
+    }
+  }, [text, onClose, currentTimeout]);
 
   return text !== "" ? <Container>{text}</Container> : <></>;
 };

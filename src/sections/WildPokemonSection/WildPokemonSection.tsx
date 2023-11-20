@@ -15,6 +15,7 @@ import PokemonZones, { ZonesByProgress } from "../../consts/PokemonZones";
 import PokemonZone from "../../components/PokemonZone/PokemonZone";
 import { OwnZone } from "../../types/utilTypes";
 import Notification from "../../components/Notification/Notification";
+import PokeballLoader from "../../components/PokeballLoader/PokeballLoader";
 
 function WildPokemonSection() {
   useCatchPokemon();
@@ -31,7 +32,7 @@ function WildPokemonSection() {
         {currentPokemon ? (
           <WildPokemonCard pokemon={currentPokemon} />
         ) : (
-          <span>LOADING</span>
+          <PokeballLoader />
         )}
       </SpriteContainer>
       <PokeballSelector onCatch={(text: string) => setNotificationText(text)} />

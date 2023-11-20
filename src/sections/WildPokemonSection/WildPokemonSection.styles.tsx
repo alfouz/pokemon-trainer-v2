@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: #f56161;
+  background: #d78080;
   padding: 40px 4px;
   display: grid;
   grid-template-rows: 1fr 80px 1fr auto;

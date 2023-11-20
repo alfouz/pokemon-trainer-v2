@@ -28,7 +28,7 @@ const BattleField = () => {
     currentTeam,
     enemyTeam,
   } = useBattleState();
-  const { cleanBattle } = useBattlingPokemon();
+  const { cleanBattle } = useBattlingPokemon({ onWin: onFinishBattle });
 
   const handleForfeit = () => {
     cleanBattle();
@@ -37,7 +37,6 @@ const BattleField = () => {
 
   const handleWin = () => {
     handleForfeit();
-    onFinishBattle && onFinishBattle();
   };
 
   return (

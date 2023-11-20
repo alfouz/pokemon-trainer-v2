@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import useBattleState from "../state/useBattleState";
 import { getDamage } from "../utils/damageFunctions";
 
-const useBattlingPokemon = () => {
+type Props = {
+  onWin?: () => void;
+};
+
+const useBattlingPokemon = ({ onWin }: Props) => {
   const [intervalID, setIntervalID] = useState<number>();
 
   const {
@@ -48,6 +52,7 @@ const useBattlingPokemon = () => {
   useEffect(() => {
     if (hasWon > 0) {
       console.log("WIN");
+      onWin && onWin();
     }
     if (hasWon < 0) {
       console.log("LOOSE");

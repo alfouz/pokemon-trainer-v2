@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import useBattleState from "../state/useBattleState";
 import { getDamage } from "../utils/damageFunctions";
 
@@ -18,7 +18,7 @@ const useBattlingPokemon = ({ onWin }: Props) => {
     battleStarted,
   } = useBattleState();
 
-  const makeBattle = () => {
+  const makeBattle = useCallback(() => {
     if (currentPokemon?.name && enemyPokemon?.name && !hasWon) {
       if (currentPokemon.stats.speed >= enemyPokemon.stats.speed) {
         const damage = getDamage(currentPokemon, enemyPokemon);
@@ -39,7 +39,13 @@ const useBattlingPokemon = ({ onWin }: Props) => {
         }
       }
     }
-  };
+  }, [
+    currentPokemon,
+    damageCurrentPokemon,
+    damageEnemyPokemon,
+    enemyPokemon,
+    hasWon,
+  ]);
 
   useEffect(() => {
     const int = setInterval(() => {
@@ -47,7 +53,7 @@ const useBattlingPokemon = ({ onWin }: Props) => {
     }, 1000);
     setIntervalID(int);
     return () => clearInterval(int);
-  }, [battleStarted]);
+  }, [battleStarted, makeBattle]);
 
   useEffect(() => {
     if (hasWon > 0) {

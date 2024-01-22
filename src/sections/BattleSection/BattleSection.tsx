@@ -10,7 +10,7 @@ import Notification from "../../components/Notification/Notification";
 function BattleSection() {
   const { battleStarted, startRandomBattle } = useBattleState();
   const { currentTeam, currentZone, progress, getBall } = usePlayerState();
-  const [notificationText, setNotificationText] = useState("asdasd");
+  const [notificationText, setNotificationText] = useState<string>("");
 
   const getRewardOnWin = () => {
     const quantity = getRandomNumberRange(1, progress > 1 ? progress : 2);

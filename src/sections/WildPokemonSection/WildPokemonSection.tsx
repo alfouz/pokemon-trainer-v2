@@ -37,7 +37,6 @@ function WildPokemonSection() {
       </SpriteContainer>
       <PokeballSelector onCatch={(text: string) => setNotificationText(text)} />
       <BottomContainer>
-        {/* <PokeButton onClick={getBallNow}>Give me ball</PokeButton> */}
         <PokeButton onClick={removePokemon}>Run</PokeButton>
       </BottomContainer>
       <ZonesContainer>

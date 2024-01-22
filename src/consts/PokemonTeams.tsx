@@ -11,7 +11,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
     stats: {
-      hp: 150,
+      hp: 200,
       attack: 100,
       defense: 120,
       speed: 40,
@@ -32,7 +32,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/438.png",
     stats: {
-      hp: 150,
+      hp: 200,
       attack: 140,
       defense: 100,
       speed: 30,
@@ -53,7 +53,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/347.png",
     stats: {
-      hp: 150,
+      hp: 200,
       attack: 160,
       defense: 70,
       speed: 95,
@@ -77,7 +77,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/246.png",
     stats: {
-      hp: 150,
+      hp: 200,
       attack: 130,
       defense: 70,
       speed: 60,
@@ -101,7 +101,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/408.png",
     stats: {
-      hp: 170,
+      hp: 230,
       attack: 190,
       defense: 60,
       speed: 78,
@@ -122,7 +122,7 @@ export const RockBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
     stats: {
-      hp: 150,
+      hp: 200,
       attack: 100,
       defense: 150,
       speed: 90,
@@ -149,7 +149,7 @@ export const WaterBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
     stats: {
-      hp: 130,
+      hp: 180,
       attack: 90,
       defense: 75,
       speed: 105,
@@ -170,7 +170,7 @@ export const WaterBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/194.png",
     stats: {
-      hp: 162,
+      hp: 242,
       attack: 92,
       defense: 60,
       speed: 35,
@@ -194,7 +194,7 @@ export const WaterBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/418.png",
     stats: {
-      hp: 151,
+      hp: 211,
       attack: 140,
       defense: 77,
       speed: 55,
@@ -215,7 +215,7 @@ export const WaterBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/194.png",
     stats: {
-      hp: 162,
+      hp: 222,
       attack: 120,
       defense: 50,
       speed: 105,
@@ -236,7 +236,7 @@ export const WaterBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/194.png",
     stats: {
-      hp: 172,
+      hp: 232,
       attack: 110,
       defense: 115,
       speed: 55,
@@ -260,7 +260,7 @@ export const WaterBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
     stats: {
-      hp: 167,
+      hp: 237,
       attack: 130,
       defense: 105,
       speed: 135,
@@ -287,7 +287,7 @@ export const ElectricBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
     stats: {
-      hp: 140,
+      hp: 210,
       attack: 90,
       defense: 75,
       speed: 120,
@@ -308,7 +308,7 @@ export const ElectricBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
     stats: {
-      hp: 130,
+      hp: 210,
       attack: 100,
       defense: 90,
       speed: 65,
@@ -332,7 +332,7 @@ export const ElectricBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png",
     stats: {
-      hp: 180,
+      hp: 240,
       attack: 90,
       defense: 65,
       speed: 87,
@@ -356,7 +356,7 @@ export const ElectricBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/404.png",
     stats: {
-      hp: 167,
+      hp: 227,
       attack: 140,
       defense: 69,
       speed: 80,
@@ -377,7 +377,7 @@ export const ElectricBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
     stats: {
-      hp: 167,
+      hp: 227,
       attack: 150,
       defense: 80,
       speed: 130,
@@ -398,7 +398,7 @@ export const ElectricBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/417.png",
     stats: {
-      hp: 200,
+      hp: 260,
       attack: 120,
       defense: 110,
       speed: 130,
@@ -422,7 +422,7 @@ export const GrassBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
     stats: {
-      hp: 160,
+      hp: 220,
       attack: 100,
       defense: 100,
       speed: 80,
@@ -446,7 +446,7 @@ export const GrassBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
     stats: {
-      hp: 170,
+      hp: 230,
       attack: 150,
       defense: 100,
       speed: 50,
@@ -470,7 +470,7 @@ export const GrassBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
     stats: {
-      hp: 172,
+      hp: 242,
       attack: 125,
       defense: 120,
       speed: 80,
@@ -491,7 +491,7 @@ export const GrassBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/286.png",
     stats: {
-      hp: 175,
+      hp: 235,
       attack: 200,
       defense: 100,
       speed: 90,
@@ -515,7 +515,7 @@ export const GrassBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png",
     stats: {
-      hp: 180,
+      hp: 250,
       attack: 170,
       defense: 150,
       speed: 120,
@@ -536,7 +536,7 @@ export const GrassBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png",
     stats: {
-      hp: 190,
+      hp: 260,
       attack: 150,
       defense: 120,
       speed: 130,
@@ -563,7 +563,7 @@ export const PoisonBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
     stats: {
-      hp: 230,
+      hp: 290,
       attack: 185,
       defense: 140,
       speed: 80,
@@ -584,7 +584,7 @@ export const PoisonBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png",
     stats: {
-      hp: 200,
+      hp: 260,
       attack: 160,
       defense: 120,
       speed: 100,
@@ -608,7 +608,7 @@ export const PoisonBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/454.png",
     stats: {
-      hp: 200,
+      hp: 260,
       attack: 180,
       defense: 85,
       speed: 105,
@@ -632,7 +632,7 @@ export const PoisonBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
     stats: {
-      hp: 177,
+      hp: 237,
       attack: 140,
       defense: 95,
       speed: 130,
@@ -656,7 +656,7 @@ export const PoisonBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/435.png",
     stats: {
-      hp: 220,
+      hp: 280,
       attack: 170,
       defense: 94,
       speed: 108,
@@ -680,7 +680,7 @@ export const PoisonBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
     stats: {
-      hp: 220,
+      hp: 290,
       attack: 200,
       defense: 130,
       speed: 110,
@@ -707,7 +707,7 @@ export const PsychicBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
     stats: {
-      hp: 200,
+      hp: 250,
       attack: 140,
       defense: 140,
       speed: 87,
@@ -728,7 +728,7 @@ export const PsychicBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
     stats: {
-      hp: 167,
+      hp: 237,
       attack: 167,
       defense: 107,
       speed: 140,
@@ -749,7 +749,7 @@ export const PsychicBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
     stats: {
-      hp: 210,
+      hp: 270,
       attack: 150,
       defense: 145,
       speed: 50,
@@ -773,7 +773,7 @@ export const PsychicBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png",
     stats: {
-      hp: 180,
+      hp: 250,
       attack: 168,
       defense: 138,
       speed: 100,
@@ -797,7 +797,7 @@ export const PsychicBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/308.png",
     stats: {
-      hp: 178,
+      hp: 248,
       attack: 190,
       defense: 105,
       speed: 105,
@@ -821,7 +821,7 @@ export const PsychicBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/376.png",
     stats: {
-      hp: 230,
+      hp: 300,
       attack: 200,
       defense: 180,
       speed: 90,
@@ -848,7 +848,7 @@ export const FireBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
     stats: {
-      hp: 195,
+      hp: 265,
       attack: 150,
       defense: 120,
       speed: 120,
@@ -869,7 +869,7 @@ export const FireBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/323.png",
     stats: {
-      hp: 188,
+      hp: 268,
       attack: 152,
       defense: 107,
       speed: 60,
@@ -893,7 +893,7 @@ export const FireBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png",
     stats: {
-      hp: 194,
+      hp: 264,
       attack: 185,
       defense: 102,
       speed: 136,
@@ -917,7 +917,7 @@ export const FireBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/467.png",
     stats: {
-      hp: 199,
+      hp: 269,
       attack: 195,
       defense: 133,
       speed: 112,
@@ -938,7 +938,7 @@ export const FireBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
     stats: {
-      hp: 205,
+      hp: 275,
       attack: 170,
       defense: 121,
       speed: 130,
@@ -962,7 +962,7 @@ export const FireBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
     stats: {
-      hp: 220,
+      hp: 290,
       attack: 220,
       defense: 140,
       speed: 134,
@@ -986,7 +986,7 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
     stats: {
-      hp: 200,
+      hp: 260,
       attack: 162,
       defense: 115,
       speed: 100,
@@ -1010,7 +1010,7 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/232.png",
     stats: {
-      hp: 203,
+      hp: 263,
       attack: 200,
       defense: 160,
       speed: 80,
@@ -1031,7 +1031,7 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/330.png",
     stats: {
-      hp: 207,
+      hp: 267,
       attack: 191,
       defense: 120,
       speed: 130,
@@ -1055,7 +1055,7 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png",
     stats: {
-      hp: 235,
+      hp: 315,
       attack: 231,
       defense: 110,
       speed: 130,
@@ -1079,7 +1079,7 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png",
     stats: {
-      hp: 220,
+      hp: 290,
       attack: 200,
       defense: 135,
       speed: 120,
@@ -1103,7 +1103,7 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/464.png",
     stats: {
-      hp: 265,
+      hp: 325,
       attack: 245,
       defense: 200,
       speed: 80,

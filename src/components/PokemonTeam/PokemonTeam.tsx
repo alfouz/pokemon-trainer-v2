@@ -12,7 +12,7 @@ const PokemonTeam = ({ pokemons }: Props) => {
   const [detailedPokemon, setDetailedPokemon] = useState<ConcretePokemon>();
   return (
     <Container>
-      <StyledSpan>Team</StyledSpan>
+      <StyledSpan>Team {pokemons.length}/6</StyledSpan>
       <InnerContainer>
         {pokemons.map((p) => (
           <PokemonTeamCard pokemon={p} onClick={setDetailedPokemon} />

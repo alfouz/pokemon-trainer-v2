@@ -1055,7 +1055,7 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png",
     stats: {
-      hp: 315,
+      hp: 300,
       attack: 231,
       defense: 110,
       speed: 130,
@@ -1103,7 +1103,7 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/464.png",
     stats: {
-      hp: 325,
+      hp: 320,
       attack: 245,
       defense: 200,
       speed: 80,
@@ -1410,9 +1410,9 @@ export const RocketTeam: ConcretePokemon[] = [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png",
     stats: {
       hp: 250,
-      attack: 230,
-      defense: 260,
-      speed: 180,
+      attack: 200,
+      defense: 220,
+      speed: 150,
     },
     types: [
       {
@@ -1426,14 +1426,14 @@ export const RocketTeam: ConcretePokemon[] = [
     name: "groudon",
     base_experience: 335,
     height: 35,
-    move: PokemonMoves.psychic.extreme,
+    move: PokemonMoves.fire.extreme,
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/383.png",
     stats: {
       hp: 230,
-      attack: 260,
-      defense: 230,
-      speed: 200,
+      attack: 230,
+      defense: 200,
+      speed: 150,
     },
     types: [
       {
@@ -1452,9 +1452,9 @@ export const RocketTeam: ConcretePokemon[] = [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png",
     stats: {
       hp: 280,
-      attack: 220,
-      defense: 280,
-      speed: 200,
+      attack: 210,
+      defense: 220,
+      speed: 150,
     },
     types: [
       {
@@ -1497,8 +1497,8 @@ export const RocketTeam: ConcretePokemon[] = [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/486.png",
     stats: {
       hp: 300,
-      attack: 250,
-      defense: 250,
+      attack: 180,
+      defense: 180,
       speed: 80,
     },
     types: [
@@ -1517,9 +1517,9 @@ export const RocketTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
     stats: {
-      hp: 250,
+      hp: 200,
       attack: 270,
-      defense: 250,
+      defense: 200,
       speed: 250,
     },
     types: [
@@ -1632,8 +1632,8 @@ export const RedTeam: ConcretePokemon[] = [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
     stats: {
       hp: 300,
-      attack: 280,
-      defense: 300,
+      attack: 250,
+      defense: 250,
       speed: 50,
     },
     types: [
@@ -1652,9 +1652,9 @@ export const RedTeam: ConcretePokemon[] = [
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
     stats: {
-      hp: 250,
-      attack: 350,
-      defense: 300,
+      hp: 200,
+      attack: 300,
+      defense: 250,
       speed: 350,
     },
     types: [

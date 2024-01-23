@@ -13,6 +13,7 @@ export const SpriteContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 420px;
 `;
 
 export const BottomContainer = styled.div`

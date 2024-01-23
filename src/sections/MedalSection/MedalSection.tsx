@@ -12,7 +12,10 @@ function MedalSection() {
     setProgress(b);
   };
 
-  const visibleBadges = PokemonBadges.slice(0, progress > 8 ? progress : 8);
+  const visibleBadges = PokemonBadges.slice(
+    0,
+    progress >= 8 ? progress + 1 : 8
+  );
 
   return (
     <Container>
@@ -23,6 +26,7 @@ function MedalSection() {
             badge={pK}
             key={pK.name}
             disabled={index > progress}
+            achieved={index < progress}
             onClick={() =>
               startBattle(currentTeam, pK.team, getBadge(index + 1))
             }

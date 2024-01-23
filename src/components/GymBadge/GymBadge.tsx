@@ -5,12 +5,17 @@ type Props = {
   badge: OwnMedal;
   onClick: () => void;
   disabled: boolean;
+  achieved: boolean;
 };
 
-const GymBadge = ({ badge, onClick, disabled }: Props) => {
+const GymBadge = ({ badge, onClick, disabled, achieved }: Props) => {
   return (
     <Container onClick={!disabled ? onClick : () => {}} disabled={disabled}>
-      <StyledImage src={badge.image} disabled={disabled}></StyledImage>
+      <StyledImage
+        achieved={achieved}
+        src={badge.image}
+        disabled={disabled}
+      ></StyledImage>
     </Container>
   );
 };

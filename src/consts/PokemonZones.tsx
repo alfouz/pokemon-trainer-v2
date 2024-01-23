@@ -46,7 +46,10 @@ export const ZonesByProgress: OwnZone[][] = [
   ["oversky", "snow"], //Poisson
   ["grocery", "classic"], //Psiquic
   ["volcan", "undersea"], //Fire
-  ["unknown", "space"], //Ground
+  [], //Ground
+  [], // E4
+  ["unknown"], // Blue
+  ["space"], // Rocket
 ];
 
 export const PokemonHabitat: { [key in OwnZone]: PokemonChance[] } = {
@@ -564,7 +567,7 @@ export const PokemonHabitat: { [key in OwnZone]: PokemonChance[] } = {
     { index: 482, chance: 2, name: "azelf" },
     { index: 488, chance: 1, name: "cresselia" },
     { index: 489, chance: 2, name: "phione" },
-    { index: 491, chance: 51, name: "darkrai" },
+    { index: 491, chance: 5, name: "darkrai" },
   ],
   space: [
     { index: 150, chance: 1, name: "mewtwo" },

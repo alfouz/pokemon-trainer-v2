@@ -13,8 +13,15 @@ export const Container = styled.div<{ disabled: boolean }>`
   }
 `;
 
-export const StyledImage = styled.img<{ disabled: boolean }>`
+export const StyledImage = styled.img<{ disabled: boolean; achieved: boolean }>`
   width: 48px;
   height: 48px;
-  filter: grayscale(${({ disabled }) => (disabled ? 1 : 0)});
+  filter: grayscale(${({ disabled }) => (disabled ? 1 : 0)})
+    ${({ achieved }) =>
+      achieved
+        ? `drop-shadow(1px 0 0 #f8ff00) drop-shadow(0 1px 0 #f8ff00)
+  drop-shadow(-1px 0 0 #f8ff00) drop-shadow(0 -1px 0 #f8ff00)
+  drop-shadow(1px 0 0 #594a00) drop-shadow(0 1px 0 #594a00)
+  drop-shadow(-1px 0 0 #594a00) drop-shadow(0 -1px 0 #594a00)`
+        : ""};
 `;

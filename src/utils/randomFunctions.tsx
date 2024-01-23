@@ -20,10 +20,10 @@ const moveChances = [50, 35, 10, 5];
 const tierImprovements: { [key in OwnTiers]: number } = {
   common: 0,
   rare: 5,
-  veryrare: 10,
-  legendary: 20,
-  mythic: 30,
-  final: 50,
+  veryrare: 15,
+  legendary: 25,
+  mythic: 40,
+  final: 60,
 };
 
 export const getMove = (type: OwnType, tier: OwnTiers) => {

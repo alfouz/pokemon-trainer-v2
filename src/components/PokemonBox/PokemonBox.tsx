@@ -12,7 +12,7 @@ const PokemonBox = ({ pokemons }: Props) => {
   const [detailedPokemon, setDetailedPokemon] = useState<ConcretePokemon>();
   return (
     <Container>
-      <StyledSpan>Box</StyledSpan>
+      <StyledSpan>Box {pokemons.length}/50</StyledSpan>
       <InnerContainer>
         {pokemons.map((p) => (
           <PokemonSmallCard pokemon={p} onClick={setDetailedPokemon} />

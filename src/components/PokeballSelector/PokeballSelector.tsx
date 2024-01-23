@@ -6,7 +6,7 @@ import { OwnBall } from "../../types/utilTypes";
 import useCurrentPokemon from "../../state/useCurrentPokemon";
 import { getRandomNumberRange } from "../../utils/genericUtils";
 
-const maxPokemonInBox = 40;
+const maxPokemonInBox = 50;
 
 type Props = {
   onCatch: (text: string) => void;

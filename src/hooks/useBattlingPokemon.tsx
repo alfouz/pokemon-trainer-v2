@@ -66,7 +66,7 @@ const useBattlingPokemon = ({ onWin }: Props) => {
     if (hasWon !== 0) {
       clearInterval(intervalID);
     }
-  }, [hasWon, intervalID]);
+  }, [hasWon, intervalID, onWin]);
 
   return {
     cleanBattle: () => {

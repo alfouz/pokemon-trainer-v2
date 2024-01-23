@@ -12,11 +12,13 @@ function MedalSection() {
     setProgress(b);
   };
 
+  const visibleBadges = PokemonBadges.slice(0, progress > 8 ? progress : 8);
+
   return (
     <Container>
       <TitleCard>Pokemon Trainer</TitleCard>
       <MedalContainer>
-        {PokemonBadges.map((pK, index) => (
+        {visibleBadges.map((pK, index) => (
           <GymBadge
             badge={pK}
             key={pK.name}

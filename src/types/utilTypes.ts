@@ -23,7 +23,11 @@ export type OwnMedalName =
   | "Soul"
   | "Marsh"
   | "Volcano"
-  | "Earth";
+  | "Earth"
+  | "EliteFour"
+  | "Blue"
+  | "Rocket"
+  | "Red";
 
 export type OwnMedal = {
   name: OwnMedalName;

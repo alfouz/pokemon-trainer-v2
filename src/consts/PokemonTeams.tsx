@@ -1119,3 +1119,549 @@ export const GroundBadgeTeam: ConcretePokemon[] = [
     tier: "common",
   },
 ];
+
+export const EliteFourTeam: ConcretePokemon[] = [
+  {
+    id: "lapras-elitefour-gym",
+    name: "lapras",
+    base_experience: 187,
+    height: 25,
+    move: PokemonMoves.ice.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+    stats: {
+      hp: 260,
+      attack: 160,
+      defense: 150,
+      speed: 100,
+    },
+    types: [
+      {
+        name: "water",
+      },
+      {
+        name: "ice",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "xatu-elitefour-gym",
+    name: "xatu",
+    base_experience: 165,
+    height: 15,
+    move: PokemonMoves.psychic.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png",
+    stats: {
+      hp: 150,
+      attack: 200,
+      defense: 150,
+      speed: 120,
+    },
+    types: [
+      {
+        name: "psychic",
+      },
+      {
+        name: "flying",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "machamp-elitefour-gym",
+    name: "machamp",
+    base_experience: 253,
+    height: 16,
+    move: PokemonMoves.fighting.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+    stats: {
+      hp: 170,
+      attack: 250,
+      defense: 100,
+      speed: 100,
+    },
+    types: [
+      {
+        name: "fighting",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "gengar-elitefour-gym",
+    name: "gengar",
+    base_experience: 250,
+    height: 15,
+    move: PokemonMoves.ghost.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+    stats: {
+      hp: 180,
+      attack: 200,
+      defense: 130,
+      speed: 200,
+    },
+    types: [
+      {
+        name: "ghost",
+      },
+      {
+        name: "poison",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "umbreon-elitefour-gym",
+    name: "umbreon",
+    base_experience: 184,
+    height: 10,
+    move: PokemonMoves.dark.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png",
+    stats: {
+      hp: 200,
+      attack: 100,
+      defense: 250,
+      speed: 130,
+    },
+    types: [
+      {
+        name: "dark",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "dragonite-elitefour-gym",
+    name: "dragonite",
+    base_experience: 300,
+    height: 22,
+    move: PokemonMoves.dragon.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+    stats: {
+      hp: 220,
+      attack: 220,
+      defense: 220,
+      speed: 180,
+    },
+    types: [
+      {
+        name: "dragon",
+      },
+      {
+        name: "flying",
+      },
+    ],
+    tier: "common",
+  },
+];
+
+export const BlueTeam: ConcretePokemon[] = [
+  {
+    id: "pidgeot-blue-gym",
+    name: "pidgeot",
+    base_experience: 216,
+    height: 15,
+    move: PokemonMoves.flying.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+    stats: {
+      hp: 240,
+      attack: 230,
+      defense: 180,
+      speed: 180,
+    },
+    types: [
+      {
+        name: "flying",
+      },
+      {
+        name: "normal",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "rhydon-blue-gym",
+    name: "rhydon",
+    base_experience: 170,
+    height: 19,
+    move: PokemonMoves.rock.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+    stats: {
+      hp: 200,
+      attack: 250,
+      defense: 250,
+      speed: 100,
+    },
+    types: [
+      {
+        name: "rock",
+      },
+      {
+        name: "ground",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "alakazam-blue-gym",
+    name: "alakazam",
+    base_experience: 250,
+    height: 15,
+    move: PokemonMoves.psychic.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
+    stats: {
+      hp: 150,
+      attack: 270,
+      defense: 170,
+      speed: 230,
+    },
+    types: [
+      {
+        name: "psychic",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "arcanine-blue-gym",
+    name: "arcanine",
+    base_experience: 194,
+    height: 19,
+    move: PokemonMoves.fire.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+    stats: {
+      hp: 190,
+      attack: 250,
+      defense: 210,
+      speed: 200,
+    },
+    types: [
+      {
+        name: "fire",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "exeggutor-blue-gym",
+    name: "exeggutor",
+    base_experience: 186,
+    height: 20,
+    move: PokemonMoves.grass.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
+    stats: {
+      hp: 200,
+      attack: 230,
+      defense: 210,
+      speed: 180,
+    },
+    types: [
+      {
+        name: "grass",
+      },
+      {
+        name: "psychic",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "blastoise-blue-gym",
+    name: "blastoise",
+    base_experience: 265,
+    height: 16,
+    move: PokemonMoves.water.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+    stats: {
+      hp: 200,
+      attack: 170,
+      defense: 280,
+      speed: 150,
+    },
+    types: [
+      {
+        name: "water",
+      },
+    ],
+    tier: "common",
+  },
+];
+
+export const RocketTeam: ConcretePokemon[] = [
+  {
+    id: "kyogre-rocket-gym",
+    name: "kyogre",
+    base_experience: 335,
+    height: 45,
+    move: PokemonMoves.water.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png",
+    stats: {
+      hp: 250,
+      attack: 230,
+      defense: 260,
+      speed: 180,
+    },
+    types: [
+      {
+        name: "water",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "groudon-rocket-gym",
+    name: "groudon",
+    base_experience: 335,
+    height: 35,
+    move: PokemonMoves.psychic.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/383.png",
+    stats: {
+      hp: 230,
+      attack: 260,
+      defense: 230,
+      speed: 200,
+    },
+    types: [
+      {
+        name: "ground",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "giratina-rocket-gym",
+    name: "giratina",
+    base_experience: 340,
+    height: 45,
+    move: PokemonMoves.ghost.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png",
+    stats: {
+      hp: 280,
+      attack: 220,
+      defense: 280,
+      speed: 200,
+    },
+    types: [
+      {
+        name: "ghost",
+      },
+      {
+        name: "dragon",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "deoxys-rocket-gym",
+    name: "deoxys",
+    base_experience: 270,
+    height: 17,
+    move: PokemonMoves.psychic.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png",
+    stats: {
+      hp: 150,
+      attack: 300,
+      defense: 150,
+      speed: 300,
+    },
+    types: [
+      {
+        name: "psychic",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "regigigas-rocket-gym",
+    name: "regigigas",
+    base_experience: 335,
+    height: 37,
+    move: PokemonMoves.normal.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/486.png",
+    stats: {
+      hp: 300,
+      attack: 250,
+      defense: 250,
+      speed: 80,
+    },
+    types: [
+      {
+        name: "normal",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "mewtwo-rocket-gym",
+    name: "mewtwo",
+    base_experience: 340,
+    height: 20,
+    move: PokemonMoves.psychic.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+    stats: {
+      hp: 250,
+      attack: 270,
+      defense: 250,
+      speed: 250,
+    },
+    types: [
+      {
+        name: "psychic",
+      },
+    ],
+    tier: "common",
+  },
+];
+
+export const RedTeam: ConcretePokemon[] = [
+  {
+    id: "venusaur-red-gym",
+    name: "venusaur",
+    base_experience: 263,
+    height: 20,
+    move: PokemonMoves.grass.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+    stats: {
+      hp: 230,
+      attack: 230,
+      defense: 270,
+      speed: 200,
+    },
+    types: [
+      {
+        name: "grass",
+      },
+      {
+        name: "poison",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "blastoise-red-gym",
+    name: "blastoise",
+    base_experience: 265,
+    height: 16,
+    move: PokemonMoves.water.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+    stats: {
+      hp: 250,
+      attack: 230,
+      defense: 230,
+      speed: 200,
+    },
+    types: [
+      {
+        name: "water",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "charizard-red-gym",
+    name: "charizard",
+    base_experience: 267,
+    height: 17,
+    move: PokemonMoves.fire.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+    stats: {
+      hp: 210,
+      attack: 270,
+      defense: 230,
+      speed: 250,
+    },
+    types: [
+      {
+        name: "fire",
+      },
+      {
+        name: "flying",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "espeon-red-gym",
+    name: "espeon",
+    base_experience: 184,
+    height: 9,
+    move: PokemonMoves.psychic.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
+    stats: {
+      hp: 200,
+      attack: 280,
+      defense: 200,
+      speed: 210,
+    },
+    types: [
+      {
+        name: "psychic",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "snorlax-red-gym",
+    name: "snorlax",
+    base_experience: 189,
+    height: 21,
+    move: PokemonMoves.normal.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+    stats: {
+      hp: 300,
+      attack: 280,
+      defense: 300,
+      speed: 50,
+    },
+    types: [
+      {
+        name: "normal",
+      },
+    ],
+    tier: "common",
+  },
+  {
+    id: "pikachu-red-gym",
+    name: "pikachu",
+    base_experience: 112,
+    height: 4,
+    move: PokemonMoves.electric.extreme,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    stats: {
+      hp: 250,
+      attack: 350,
+      defense: 300,
+      speed: 350,
+    },
+    types: [
+      {
+        name: "electric",
+      },
+    ],
+    tier: "common",
+  },
+];

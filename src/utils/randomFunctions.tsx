@@ -21,24 +21,23 @@ const tierImprovements: { [key in OwnTiers]: number } = {
   common: 0,
   rare: 5,
   veryrare: 15,
-  legendary: 25,
-  mythic: 40,
-  final: 60,
+  legendary: 30,
+  mythic: 50,
+  final: 70,
 };
 
 export const getMove = (type: OwnType, tier: OwnTiers) => {
   const move = getRandomNumberRange(0, 100) + tierImprovements[tier];
-  let power = movePowers[3];
   if (move < moveChances[0]) {
-    power = movePowers[0];
+    return PokemonMoves[type][movePowers[0]];
   }
   if (move < moveChances[0] + moveChances[1]) {
-    power = movePowers[1];
+    return PokemonMoves[type][movePowers[1]];
   }
   if (move < moveChances[0] + moveChances[1] + moveChances[2]) {
-    power = movePowers[2];
+    return PokemonMoves[type][movePowers[2]];
   }
-  return PokemonMoves[type][power];
+  return PokemonMoves[type][movePowers[2]];
 };
 
 export const selectRandomType = (types: OwnType[]) => {
